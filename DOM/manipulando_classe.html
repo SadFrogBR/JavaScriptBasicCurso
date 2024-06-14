@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+        .estilo1{
+            background-color: blue;
+            color: white;
+        }
+
+        .estilo2{
+            background-color: black;
+            color: white;
+        }
+    </style>
+
+    <script>
+        function modificaEstilo(){
+            document.getElementById('mensagem').className='estilo2'
+        }
+    </script>
+</head>
+<body>
+    <div id="mensagem" class="estilo1">Modificando a classe</div>
+
+    <button type="button" onclick="modificaEstilo()">jose</button>
+</body>
+</html>

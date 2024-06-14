@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+        body{
+            background-color: purple;
+            text-align: center;
+
+        }
+
+        h1, .joj{
+            font-size: 100px; /* Tamanho do texto */
+            font-weight: 900;
+            color: red; /* Cor do texto */
+            -webkit-text-stroke: 1px white; /* Largura e cor da borda */
+        }
+
+        button, .bit{
+            font-size: 50px;
+            background-color: red;
+            color: white;
+        }
+    </style>
+
+
+</head>
+<body id="tamanho">
+    <h1 id ="pergunta">Cuzin Hoje?</h1>
+    <div>
+    <button onclick="sim()" id="sim">Sim</button>
+ 
+    <button onmouseover="cuzin()" id="nao">Não</button>
+    </div>
+
+    <script>
+        var altura = window.innerHeight
+        var largura = window.innerWidth
+
+        document.getElementsById('tamanho').height = altura
+        document.getElementsById('tamanho').width = largura
+
+        function cuzin(){
+
+            document.getElementById('nao').remove()
+
+            var posicaox = Math.floor(Math.random() * largura) - 90
+            var posicaoy = Math.floor(Math.random() * altura) - 90
+
+            posicaox = posicaox < 0 ? 0 : posicaox
+            posicaoy = posicaoy < 0 ? 0 : posicaoy
+
+            var nao = document.createElement('button')
+            nao.id='nao'
+            nao.style.left=posicaox + 'px'
+            nao.style.top=posicaoy + 'px'
+            nao.style.position='absolute'
+            nao.innerText = 'Não'
+
+            nao.addEventListener('mouseover', cuzin)
+            document.body.appendChild(nao)
+            
+
+        }
+
+        function sim(){
+                document.getElementById('nao').remove()
+                document.getElementById('sim').remove()
+                document.getElementById('pergunta').remove()
+
+                let min = document.createElement('h1')
+                min.className='joj'
+                min.innerText = 'Hihiha'
+
+                document.body.appendChild(min)
+
+                let rei = document.createElement('img')
+                rei.src='https://th.bing.com/th/id/OIP.wjVlAhxmPhQfHPJwrnIHJQHaEK?rs=1&pid=ImgDetMain'
+                
+                document.body.appendChild(rei)
+
+        }
+
+
+                
+        
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+
+
+    <script>
+        function selecionaCor(cor){
+            document.getElementById('mudavel').style.background=cor
+        }
+    </script>
+</head>
+<body>
+    <H2>Manipulando Estilos</H2>
+    <button onclick="selecionaCor('#FF0000')" type="button" id="vermelho">Vermelho</button>
+    <button onclick="selecionaCor('#00FF00')" type="button" id="azul">Azul</button>
+    <button onclick="selecionaCor('#0000FF')" type="button" id="verde">Verde</button>
+    <hr/>
+    <hr/>
+    <div id="mudavel" style="background: #ccc; height: 150px; width: 150px;"></div>
+</body>
+</html>

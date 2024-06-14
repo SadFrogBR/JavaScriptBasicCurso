@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+
+    </style>
+    
+    <script>
+        
+        var janela
+        function AbrirJanela(){
+            janela = window.open("", "", "width=570,height=300");
+
+            janela.document.write('<img src="mae.png">')
+        }
+
+        function fecharJanela(){
+            janela.close()
+        }
+
+    </script>
+
+</head>
+<body>
+
+    <button onclick="AbrirJanela()">Abrir Janela</button>
+    <button onclick="fecharJanela()">fechar janela</button>
+
+    
+
+</body>
+</html>
